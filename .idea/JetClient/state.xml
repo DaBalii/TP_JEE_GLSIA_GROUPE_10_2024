@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="raw" value="{&#10;  &quot;typeCompte&quot;: &quot;COURANT&quot;,&#10;  &quot;dateCreation&quot;: &quot;2021-02-10&quot;,&#10;  &quot;solde&quot;: 10.0,&#10;  &quot;proprietaire&quot;:{&#10;    &quot;id&quot;: 4&#10;  }&#10;}" />
+                  <option name="type" value="JSON" />
+                </bodyState>
+              </option>
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Content-Type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="a3829e3b-39fc-4721-ac13-2531fd4ca1d3" />
+              <option name="method" value="GET" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:8080/api/clients" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="id" value="4ed19560-e768-460b-8ab5-c8ff4df46e68" />
+  </component>
+</project>
