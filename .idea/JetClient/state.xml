@@ -8,7 +8,7 @@
             <requestState>
               <option name="body">
                 <bodyState>
-                  <option name="raw" value="{&#10;  &quot;typeCompte&quot;: &quot;COURANT&quot;,&#10;  &quot;dateCreation&quot;: &quot;2021-02-10&quot;,&#10;  &quot;solde&quot;: 10.0,&#10;  &quot;proprietaire&quot;:{&#10;    &quot;id&quot;: 4&#10;  }&#10;}" />
+                  <option name="raw" value="{&#10;  &quot;idCompteSource&quot;: 2,&#10;  &quot;idCompteDestination&quot;: 1,&#10;  &quot;montant&quot;: 5.0&#10;}&#10;" />
                   <option name="type" value="JSON" />
                 </bodyState>
               </option>
@@ -23,7 +23,19 @@
               <option name="id" value="a3829e3b-39fc-4721-ac13-2531fd4ca1d3" />
               <option name="method" value="GET" />
               <option name="name" value="Draft" />
-              <option name="url" value="http://localhost:8080/api/clients" />
+              <option name="queryParams">
+                <list>
+                  <queryParamState>
+                    <option name="key" value="startDate" />
+                    <option name="value" value="2023-01-12" />
+                  </queryParamState>
+                  <queryParamState>
+                    <option name="key" value="endDate" />
+                    <option name="value" value="2023-12-28" />
+                  </queryParamState>
+                </list>
+              </option>
+              <option name="url" value="http://localhost:8080/api/comptes/2/transactions?startDate=2023-01-12&amp;endDate=2023-12-28" />
             </requestState>
           </list>
         </option>

@@ -31,6 +31,14 @@ public class compte {
     @JoinColumn(name = "client_id")
     private client proprietaire;
 
+    @Override
+    public String toString() {
+        return "Compte{" +
+                "id=" + id +
+                ", proprietaire='" + proprietaire + '\'' +
+                '}';
+    }
+
 
 
 }

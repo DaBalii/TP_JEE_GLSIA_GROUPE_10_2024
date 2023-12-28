@@ -32,5 +32,16 @@ public class client {
     private List<compte> comptes;
 
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "client_id=" + id +
+                ", nom='" + nom + '\'' +
+                // Ajoutez d'autres propriétés ici
+                '}';
+    }
+
+
+
 
 }
