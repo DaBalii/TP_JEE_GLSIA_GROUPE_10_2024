@@ -66,6 +66,17 @@ public class CompteController {
         compteService.faireRetrait(id,montantRequest.getMontant());
     }
 
+    /*
+
+    {
+  "idCompteSource": 23,
+  "idCompteDestination": 22,
+  "montant": 195.0
+
+    }
+
+     */
+
 
     @PostMapping("/transis")
     public ResponseEntity<String> faireVirement(@RequestBody VirementRequest virementRequest) {
@@ -81,6 +92,7 @@ public class CompteController {
         }
     }
 
+    //http://localhost:8080/api/comptes/23/transactions?startDate=2024-01-01&endDate=2024-01-06
     @GetMapping("/{compteId}/transactions")
     public List<Transaction> getTransactionsByCompteAndDate(
             @PathVariable Long compteId,

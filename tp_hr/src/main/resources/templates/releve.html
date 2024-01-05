@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Relevé de Transactions</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Relevé de Transactions</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Montant</th>
+        <th>Type</th>
+        <th>Nom Client</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="transaction : ${transactions}">
+        <td th:text="${transaction.date}"></td>
+        <td th:text="${transaction.montant}"></td>
+        <td th:text="${transaction.type}"></td>
+        <td th:text="${transaction.nom}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<button onclick="imprimerReleve()">Imprimer le Relevé</button>
+
+<script>
+    function imprimerReleve() {
+        window.print();
+    }
+</script>
+
+
+</body>
+</html>

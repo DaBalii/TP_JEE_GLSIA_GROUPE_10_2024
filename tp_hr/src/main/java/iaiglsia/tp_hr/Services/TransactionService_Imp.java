@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class TransactionService_Imp implements TransactionService{
 
@@ -23,4 +25,12 @@ public class TransactionService_Imp implements TransactionService{
         System.out.println("Transactions trouvées : " + transactions);
         return transactions;
     }
+
+    @Override
+    public List<Transaction> getTransactionsByClientId(Long id) {
+        return transactionRepository.findByCompte_Proprietaire_Id(id);
+
+    }
+
+
 }

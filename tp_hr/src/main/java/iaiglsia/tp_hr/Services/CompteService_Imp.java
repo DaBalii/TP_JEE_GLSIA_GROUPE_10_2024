@@ -11,8 +11,10 @@ import org.iban4j.Iban;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Random;
 
 @Service
 @AllArgsConstructor
@@ -35,6 +37,12 @@ public class CompteService_Imp implements CompteService{
     @Override
     public compte createCompte(compte compte) {
         compte.setSolde(0.0);
+
+        LocalDate dateCreation = compte.getDateCreation();
+        if (dateCreation == null || !dateCreation.isEqual(LocalDate.now())) {
+            throw new RuntimeException("La date de création doit être la date actuelle.");
+        }
+
         String generatedIban = generateIban();
         compte.setNumeroCompte(generatedIban);
         return compteRepository.save(compte);
@@ -58,17 +66,48 @@ public class CompteService_Imp implements CompteService{
 
     }
 
-    private String generateIban() {
+
+
+
+
+    public String generateIban() {
+        SecureRandom random = new SecureRandom();
+
+        String bban = generateRandomAlphaNumericString(23, random);
+
         Iban iban = new Iban.Builder()
                 .countryCode(CountryCode.FR)
                 .bankCode("12345")
                 .branchCode("67890")
-                .accountNumber("ABCDEFGHIJK")
-                .nationalCheckDigit("67")
+                .accountNumber(bban.substring(0, 11))
+                .nationalCheckDigit(generateRandomNumericString(2, random))
                 .build();
 
         return iban.toString();
     }
+
+
+    private String generateRandomAlphaNumericString(int length, SecureRandom random) {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            result.append(characters.charAt(random.nextInt(characters.length())));
+        }
+
+        return result.toString();
+    }
+
+    private String generateRandomNumericString(int length, SecureRandom random) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            result.append(random.nextInt(10));
+        }
+
+        return result.toString();
+    }
+
 
 
     public String faireVersement(Long id, double montant) {

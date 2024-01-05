@@ -1,19 +1,41 @@
 package iaiglsia.tp_hr.Controller;
 
+
+
+
 import iaiglsia.tp_hr.Services.ClientService;
+
+import iaiglsia.tp_hr.Services.TransactionService;
+import iaiglsia.tp_hr.Validator.ClientValidator;
+import iaiglsia.tp_hr.entity.Transaction;
 import iaiglsia.tp_hr.entity.client;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+
+
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
+
+import java.util.ArrayList;
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/api/clients")
 @AllArgsConstructor
+@Controller
 public class ClientController {
     @Autowired
     private ClientService clientService;
+
+    private ClientValidator clientValidator;
+    private TransactionService transactionService;
+
 
     @GetMapping
     public List<client> getAllClients() {
@@ -28,12 +50,22 @@ public class ClientController {
 
 
     @PostMapping("/create")
-    public client createClient(@RequestBody client client) {
+    public client createClient(@RequestBody client client, Errors errors) {
+
+        clientValidator.validate(client, errors);
+        if (errors.hasErrors()) {
+            return null;
+        }
         return clientService.createClient(client);
     }
 
     @PutMapping("/update/{id}")
-    public client updateClient(@PathVariable Long id, @RequestBody client updatedClient) {
+    public client updateClient(@PathVariable Long id, @RequestBody client updatedClient,Errors errors) {
+
+        clientValidator.validate(updatedClient, errors);
+        if (errors.hasErrors()) {
+            return null;
+        }
         return clientService.updateClient(id, updatedClient);
     }
 
@@ -42,5 +74,31 @@ public class ClientController {
         clientService.deleteClient(id);
         return "Client supprimer avec succès";
     }
+
+    @GetMapping("/releve/{id}")
+    public ResponseEntity<String> telechargerReleveHtml(@PathVariable Long id, Model model) {
+        List<Transaction> transactions = new ArrayList<>();
+
+        transactions = transactionService.getTransactionsByClientId(id);
+
+        if (!transactions.isEmpty()) {
+            model.addAttribute("transactions", transactions);
+        } else {
+            model.addAttribute("transactions", new ArrayList<>());
+        }
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.TEXT_HTML)
+                .body("releve");
+    }
+
+
+
+
+
+
+
+
+
 
 }
