@@ -28,7 +28,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/clients")
 @AllArgsConstructor
-@Controller
 public class ClientController {
     @Autowired
     private ClientService clientService;
@@ -74,30 +73,6 @@ public class ClientController {
         clientService.deleteClient(id);
         return "Client supprimer avec succès";
     }
-
-    @GetMapping("/releve/{id}")
-    public ResponseEntity<String> telechargerReleveHtml(@PathVariable Long id, Model model) {
-        List<Transaction> transactions = new ArrayList<>();
-
-        transactions = transactionService.getTransactionsByClientId(id);
-
-        if (!transactions.isEmpty()) {
-            model.addAttribute("transactions", transactions);
-        } else {
-            model.addAttribute("transactions", new ArrayList<>());
-        }
-
-        return ResponseEntity.ok()
-                .contentType(MediaType.TEXT_HTML)
-                .body("releve");
-    }
-
-
-
-
-
-
-
 
 
 

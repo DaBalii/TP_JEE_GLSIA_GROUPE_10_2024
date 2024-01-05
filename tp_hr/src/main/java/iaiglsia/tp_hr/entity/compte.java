@@ -35,9 +35,10 @@ public class compte {
     public String toString() {
         return "Compte{" +
                 "id=" + id +
-                ", proprietaire='" + proprietaire + '\'' +
+                ", proprietaireId=" + (proprietaire != null ? proprietaire.getId() : null) +
                 '}';
     }
+
 
 
 
