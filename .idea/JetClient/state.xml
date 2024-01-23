@@ -3,12 +3,32 @@
   <component name="JetClientState">
     <option name="draftsState">
       <draftsState>
+        <option name="auth">
+          <authState>
+            <option name="bearer">
+              <ji>
+                <option name="token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkthZGkiLCJyb2xlIjpbXSwiaXNzIjoicmJhY3NwcmluZyIsImV4cCI6MTcwNjA1MDE5NiwiaWF0IjoxNzA2MDMyMTk2fQ.j-YeuUVDJOk-GGme6VBUG-P6G9eToLp7ptt7MXdfm4sA3mOdykL78VBdwXOnJWEom3L9s37OBlHyKK9zyE6vmw" />
+              </ji>
+            </option>
+            <option name="type" value="BEARER" />
+          </authState>
+        </option>
         <option name="requests">
           <list>
             <requestState>
+              <option name="auth">
+                <authState>
+                  <option name="bearer">
+                    <ji>
+                      <option name="token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqZXJ0b2xhIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJpc3MiOiJyYmFjc3ByaW5nIiwiZXhwIjoxNzA2MDcxMTk0LCJpYXQiOjE3MDYwNTMxOTR9.XtrNOcgAf2duGy9ERmoeNF5yi_3Uva3-Rn9F6QmBE1x6T84VnvWqObAfuTqOOrjex-qO-mk3H4xvE9vLvktspA" />
+                    </ji>
+                  </option>
+                  <option name="type" value="BEARER" />
+                </authState>
+              </option>
               <option name="body">
                 <bodyState>
-                  <option name="raw" value="{&#10;  &quot;idCompteSource&quot;: 23,&#10;  &quot;idCompteDestination&quot;: 22,&#10;  &quot;montant&quot;: 195.0&#10;  &#10;}&#10;" />
+                  <option name="raw" value="{&#10;  &quot;username&quot;: &quot;jertola&quot;,&#10;  &quot;password&quot;: &quot;jert@1034&quot;&#10;}&#10;" />
                   <option name="type" value="JSON" />
                 </bodyState>
               </option>
@@ -18,12 +38,15 @@
                     <option name="key" value="Content-Type" />
                     <option name="value" value="application/json" />
                   </headerState>
+                  <headerState>
+                    <option name="disabled" value="true" />
+                  </headerState>
                 </list>
               </option>
               <option name="id" value="a3829e3b-39fc-4721-ac13-2531fd4ca1d3" />
               <option name="method" value="GET" />
               <option name="name" value="Draft" />
-              <option name="url" value="http://localhost:8080/api/impression/releve/2" />
+              <option name="url" value="http://localhost:8080/api/clients" />
             </requestState>
           </list>
         </option>

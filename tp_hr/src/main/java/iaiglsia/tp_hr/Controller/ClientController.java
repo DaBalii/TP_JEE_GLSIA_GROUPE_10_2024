@@ -59,13 +59,13 @@ public class ClientController {
     }
 
     @PutMapping("/update/{id}")
-    public client updateClient(@PathVariable Long id, @RequestBody client updatedClient,Errors errors) {
+    public client updateClient(@PathVariable Long id, @RequestBody client client,Errors errors) {
 
-        clientValidator.validate(updatedClient, errors);
+        clientValidator.validate(client, errors);
         if (errors.hasErrors()) {
             return null;
         }
-        return clientService.updateClient(id, updatedClient);
+        return clientService.updateClient(id, client);
     }
 
     @DeleteMapping("/delete/{id}")
