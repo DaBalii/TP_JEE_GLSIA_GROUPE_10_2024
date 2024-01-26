@@ -24,10 +24,7 @@ public class UserRegisterRequestDTO {
 	private String password;
 
 	private String entityNo;
-	
-	private String firstname;
 
-	private String lastname;
 
 	private String initial;
 
@@ -39,7 +36,7 @@ public class UserRegisterRequestDTO {
 	
 	private String email;
 	
-	private String mobile;
+
 
 	private List<String> roleList = new ArrayList<>();
 	/**
@@ -84,37 +81,7 @@ public class UserRegisterRequestDTO {
 		this.entityNo = entityNo;
 	}
 
-	/**
-	 * @return the firstname
-	 */
-	public String getFirstname() {
-		return firstname;
-	}
 
-	/**
-	 * @param firstname the firstname to set
-	 */
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-
-	/**
-	 * @return the lastname
-	 */
-	public String getLastname() {
-		return lastname;
-	}
-
-	/**
-	 * @param lastname the lastname to set
-	 */
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
-	/**
-	 * @return the initial
-	 */
 	public String getInitial() {
 		return initial;
 	}
@@ -180,20 +147,6 @@ public class UserRegisterRequestDTO {
 	 */
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	/**
-	 * @return the mobile
-	 */
-	public String getMobile() {
-		return mobile;
-	}
-
-	/**
-	 * @param mobile the mobile to set
-	 */
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
 	}
 
 	public List<String> getRoleList() {

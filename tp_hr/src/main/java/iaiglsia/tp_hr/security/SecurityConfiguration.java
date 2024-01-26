@@ -58,10 +58,11 @@ public class SecurityConfiguration {
 	public SecurityFilterChain securityFilterChainGlobalAPI(HttpSecurity httpSecurity) throws Exception {
 		sharedSecurityConfiguration(httpSecurity);
 
-		httpSecurity.securityMatcher("user", "admin").authorizeHttpRequests(auth -> {
-			auth.requestMatchers(new AntPathRequestMatcher("/api/**")).hasRole("ADMIN");
-			auth.anyRequest().authenticated();
-		}).addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+		httpSecurity.securityMatcher("user", "admin")
+				.authorizeHttpRequests(auth -> {
+					auth.requestMatchers(new AntPathRequestMatcher("/api/**")).hasRole("ADMIN");
+				})
+				.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
 		return httpSecurity.build();
 	}

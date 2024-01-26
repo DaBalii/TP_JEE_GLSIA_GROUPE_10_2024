@@ -20,7 +20,7 @@
                 <authState>
                   <option name="bearer">
                     <ji>
-                      <option name="token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqZXJ0b2xhIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJpc3MiOiJyYmFjc3ByaW5nIiwiZXhwIjoxNzA2MDcxMTk0LCJpYXQiOjE3MDYwNTMxOTR9.XtrNOcgAf2duGy9ERmoeNF5yi_3Uva3-Rn9F6QmBE1x6T84VnvWqObAfuTqOOrjex-qO-mk3H4xvE9vLvktspA" />
+                      <option name="token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqZXJ0b2xhIiwicm9sZSI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJpc3MiOiJyYmFjc3ByaW5nIiwiZXhwIjoxNzA2MDcxNjgzLCJpYXQiOjE3MDYwNTM2ODN9.WD9MLq_Ng3vuxym7yXmcdigNfmhRr1YsPftEBETio1ftpsYIvzP8hPd8K4pHc6pNzoq7mnWv3NsRS_uuboFpqw" />
                     </ji>
                   </option>
                   <option name="type" value="BEARER" />
