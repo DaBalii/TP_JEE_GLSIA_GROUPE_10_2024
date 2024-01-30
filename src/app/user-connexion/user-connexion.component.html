@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+  <div class="container">
+    <form>
+      <h1>Login</h1>
+      <div class="form">
+        <label for="">Email</label>
+        <input type="email" class="control" required>
+      </div>
+      <div class="form">
+        <label for="">Password </label>
+        <input type="password" class="control" required>
+      </div>
+      <button type="submit" class="btn" (click)="liste()">Login</button>
+      <hr>
+      <div class="login_message">
+        <p>Don't have an account &amp; <button type="button" (click)="register()" class="btn1">Sign Up</button> </p>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+<!--<div class="login_form_wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <div class="login_wrapper">
+
+          <h2>LOGIN</h2>
+
+          <div class="formsix-pos">
+            <div class="form-group i-email">
+              <input type="email" class="form-control" required="" id="email2" placeholder="Email Address *">
+            </div>
+          </div>
+
+          <div class="formsix-e">
+            <div class="form-group i-password">
+              <input type="password" class="form-control" required="" id="password2" placeholder="Password *">
+            </div>
+          </div>
+          <div class="login_remember_box">
+            <label class="control control--checkbox">Remember me
+              <input type="checkbox">
+              <span class="control__indicator"></span>
+            </label>
+            <a href="#" class="forget_password">
+              Forgot Password
+            </a>
+          </div>
+          <div class="login_btn_wrapper">
+            <button class="btn btn-primary login_btn" (click)="liste()" > Login </button>
+          </div>
+          <div class="login_message">
+            <p>Don&rsquo;t have an account ? <button type="button" (click)="register()" class="btn btn-outline-danger">Sign Up</button> </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>-->

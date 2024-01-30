@@ -1,0 +1,99 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container{
+  max-width: 1440px;
+  width: 80%;
+  background: #fff;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.container h2{
+  padding: 2rem 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.tb1 {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tb1 thead{
+  background: #424949;
+  color: #fff;
+}
+.tb1 thead tr th{
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  letter-spacing: 0.2rem;
+  vertical-align: top;
+  border: 1px solid #aab7B8;
+}
+
+.tb1 tbody tr td{
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid #aab7B8;
+  padding: 0.8rem;
+}
+.tb1 tr:nth-child(even){
+  background: #ccc;
+  transition: all 0.3s ease-in;
+
+
+}
+
+nav{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background-color: #fff;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+a{
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+}
+.fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+
+a:hover{
+  background: #eee;
+
+}
+nav:hover{
+  width: 280px;
+  transition: all 0.5s ease;
+}

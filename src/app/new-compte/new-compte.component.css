@@ -1,0 +1,121 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  background: #eee;
+  display: flex;
+  font-family: sans-serif;
+}
+.container{
+  margin: auto;
+
+  width: 500px;
+  max-width: 90%;
+}
+.label-with-margin {
+  margin-top: 10px;
+}
+
+.container form{
+  width: 700px;
+  height: 500px;
+  padding: 20px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+}
+.container form h1{
+  text-align: center;
+  margin-bottom: 24px;
+  color: #222;
+}
+.container form .control{
+  width: 40%;
+  height: 40px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid silver;
+  margin: 10px 0 18px 0;
+  padding: 0 10px;
+}
+.container form .btn{
+  margin-left: 50px;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 34px;
+  border: none;
+  outline: none;
+  background: blue;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 4px;
+  transition: .3s;
+}
+.container form .btn1{
+  margin-left: 50px;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 34px;
+  border: none;
+  outline: none;
+  background: red;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 4px;
+  transition: .3s;
+}
+.container form .btn:hover{
+  opacity: .7;
+}
+.detail{
+  justify-content: space-between;
+}
+nav{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background-color: #fff;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+a{
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+}
+.fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+
+a:hover{
+  background: #eee;
+
+}
+nav:hover{
+  width: 280px;
+  transition: all 0.5s ease;
+}

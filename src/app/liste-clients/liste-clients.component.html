@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+  <nav>
+    <li><a href="#">App Bank
+      <span class="nav-item"></span></a>
+    </li>
+    <li><a href="#" routerLink="/liste"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Liste des Clients</span>
+      </a>
+    </li>
+    <li><a href="#" routerLink="/new"><i class="bi fas bi-house"></i>
+      <span class="nav-item" >Nouveau client</span>
+      </a>
+    </li>
+    <li><a href="#" routerLink="/liste-compte"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Liste des comptes</span>
+      </a>
+    </li>
+
+  </nav>
+
+  <div class="container">
+    <div class="tb1_container">
+      <h2>Liste des Clients</h2>
+      <table class="tb1">
+        <thead>
+          <tr>
+            <th>Client Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Adresse</th>
+            <th>Courriel</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let clt of clients">
+            <td>{{clt.id}}</td>
+            <td>{{clt.nom}}</td>
+            <td>{{clt.prenom}}</td>
+            <td>{{clt.adresse}}</td>
+            <td>{{clt.courriel}}</td>
+            <td>
+              <button class="btn_trash" (click)="deleteClient(clt)"></button>
+            </td>
+            <td>
+              <button class="btn_edit" (click)="editerClient(clt)"></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+<!--<nav class="navbar navbar-dark bg-dark fixed-top ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Liste des Clients</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+      aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Clients
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#" routerLink="/liste">Liste des Clients</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#" routerLink="/new">Nouveau Clients</a></li>
+
+
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Comptes
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#" routerLink="/liste-compte">Liste des comptes</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Nouveau Compte</a></li>
+
+
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Transactions
+
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>-->
+
+
+<!--<div class="card mt-3 mb-2 mx-3 " >
+  <div class="card-body">
+    Liste des Clients
+  </div>
+</div>
+<div class="card mx-3" >
+  <div class="card-body">
+      <table class="table table-hover table-bordered table-stiped"  >
+          <thead class="table-primary" >
+              <tr>
+                <th>Id</th>
+                  <th>Nom</th>
+                  <th>Prenom</th>
+                  <th>Email</th>
+                  <th>Adresse</th>
+
+              </tr>
+
+          </thead>
+          <tbody>
+              <tr *ngFor="let clt of clients"  >
+                  <td>{{clt.id}}</td>
+                  <td>{{clt.nom}}</td>
+                  <td>{{clt.prenom}}</td>
+                  <td>{{clt.courriel}}</td>
+                  <td>{{clt.adresse}}</td>
+                  <td>
+                    <button class="btn btn-outline-danger " (click)="deleteClient(clt)"><i class="bi bi-trash"></i></button>
+                  </td>
+                  <td>
+                    <button class="btn btn-outline-info" (click)="editerClient(clt)"><i class="bi bi-pencil"></i></button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>-->
+
+
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Company
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">Contact us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>-->

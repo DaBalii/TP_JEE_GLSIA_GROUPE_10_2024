@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+  <nav>
+    <li><a href="#">App Bank
+      <span class="nav-item"></span></a>
+    </li>
+    <li><a href="#" routerLink="/liste"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Liste des Clients</span>
+      </a>
+    </li>
+    <li><a href="#" routerLink="/new"><i class="bi fas bi-house"></i>
+      <span class="nav-item" >Nouveau client</span>
+      </a>
+    </li>
+    <li><a href="#" routerLink="/liste-compte"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Liste des comptes</span>
+      </a>
+    </li>
+    <li><a href="#" routerLink="/new-compte"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Liste des comptes</span>
+      </a>
+    </li>
+
+  </nav>
+
+  <div class="container">
+    <div class="tb1_container">
+      <h2>Liste des Comptes crées</h2>
+      <table class="tb1">
+        <thead>
+          <tr>
+            <th>Compte Id</th>
+            <th>Date_creation</th>
+            <th>Numero_Compte</th>
+            <th>Solde</th>
+            <th>Type_Compte</th>
+            <th>Client_Id</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cpt of comptes">
+            <td>{{cpt.id}}</td>
+            <td>{{cpt.date_creation}}</td>
+            <td>{{cpt.numero_compte}}</td>
+            <td>{{cpt.solde}}</td>
+            <td>{{cpt.type_compte}}</td>
+            <td>{{cpt.client?.id}}</td>
+            <td>
+              <button class="btn_trash" (click)="deleteCompte(cpt)"></button>
+            </td>
+            <td>
+              <button class="btn_edit" (click)="editerCompte(cpt)"></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <nav>
+    <li><a href="#">App Bank
+      <span class="nav-item"></span></a>
+    </li>
+    <li><a href="#" routerLink="/liste"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Liste des clients</span>
+      </a>
+    </li>
+    <li><a href="#"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Home</span>
+      </a>
+    </li>
+    <li><a href="#"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Home</span>
+      </a>
+    </li>
+
+  </nav>
+
+  <div class="container" *ngIf="compteForm">
+    <form [formGroup]="compteForm" (ngSubmit)="updateCompte()">
+      <h1>Update Compte</h1>
+      <div class="detail">
+        <div class="form">
+          <label for="">Numero:</label>
+          <input type="text"  class="control" formControlName="numero_compte" required>
+          <label for=""  >Date:</label>
+          <input type="date" class="control" formControlName="date_creation" required>
+        </div>
+        <div class="form">
+          <label for="">Solde:</label>
+          <input type="email" class="control" formControlName="solde" required>
+          <label for="">Type: </label>
+          <input type="text" class="control" formControlName="type_compte" required>
+        </div>
+
+        <div class="form">
+          <label for="">Client Id:</label>
+          <input type="text" class="control" formControlName="client_id" required>
+
+        </div>
+      </div>
+      <hr>
+      <button type="submit" [disabled]="compteForm.invalid" class="btn">Enregistrer</button>
+
+    </form>
+  </div>

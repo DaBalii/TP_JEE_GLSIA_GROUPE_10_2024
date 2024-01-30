@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <nav>
+    <li><a href="#">App Bank
+      <span class="nav-item"></span></a>
+    </li>
+    <li><a href="#" routerLink="/liste"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Liste</span>
+      </a>
+    </li>
+    <li><a href="#"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Home</span>
+      </a>
+    </li>
+    <li><a href="#"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Home</span>
+      </a>
+    </li>
+
+  </nav>
+
+  <div class="container" *ngIf="clientForm">
+    <form [formGroup]="clientForm" (ngSubmit)="updateClient()">
+      <h1>Update Client</h1>
+      <div class="detail">
+        <div class="form">
+          <label for="">Nom:</label>
+          <input type="text"  class="control" formControlName="nom" required>
+          <label for=""  >Prenom:</label>
+          <input type="text" class="control" formControlName="prenom" required>
+        </div>
+        <div class="form">
+          <label for="">Email</label>
+          <input type="email" class="control" formControlName="courriel" required>
+          <label for="">Adresse </label>
+          <input type="text" class="control" formControlName="adresse" required>
+        </div>
+        <div class="form">
+          <label for="">Sexe:</label>
+          <input type="text" class="control" formControlName="sexe" required>
+          <label for="">Date: </label>
+          <input type="date" class="control" formControlName="date_naissance" required>
+        </div>
+        <div class="form">
+          <label for="">Numero:</label>
+          <input type="tel" class="control" formControlName="numero_telephone" required>
+
+        </div>
+      </div>
+      <hr>
+      <button type="submit" [disabled]="clientForm.invalid" class="btn">Enregistrer</button>
+
+    </form>
+  </div>
+
+
+
+
+<!--<div class="p-3">
+  <div class="card shadow ms-5 me-5">
+    <div class="card-header">
+      <h3>Mise à jour d'un Client</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6" *ngIf="clientForm">
+          <form [formGroup]="clientForm" (ngSubmit)="updateClient()">
+            <div>
+              <label class="form-label">Nom : </label>
+              <input class="form-control" formControlName="nom">
+            </div>
+            <div>
+              <label class="form-label">Prenom : </label>
+              <input class="form-control" formControlName="prenom">
+            </div>
+            <div>
+              <label class="form-label">Email : </label>
+              <input class="form-control" formControlName="courriel">
+            </div>
+            <div>
+              <label class="form-label">Sexe : </label>
+              <input class="form-control" formControlName="sexe">
+            </div>
+            <div>
+              <label class="form-label">Adresse : </label>
+              <input class="form-control" formControlName="adresse">
+            </div>
+            <div>
+              <label class="form-label">Date de Naissance : </label>
+              <input class="form-control" formControlName="date_naissance">
+            </div>
+            <div>
+              <label class="form-label">Numero de Téléphone : </label>
+              <input class="form-control" formControlName="numero_telephone">
+            </div>
+            <div class="mt-2">
+              <button [disabled]="clientForm.invalid" class="btn btn-primary">Valider</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
