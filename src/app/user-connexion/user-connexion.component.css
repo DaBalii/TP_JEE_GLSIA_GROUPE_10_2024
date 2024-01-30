@@ -1,19 +1,23 @@
 body {
-  background-image: url('/images/digital-techno-background-with-connecting-lines-dots.jpg');
-  background-size: cover;
-  background-position: center;
   font-family: "Poppins", sans-serif;
+  padding: 100px;
+  padding-bottom: 500px;
 }
+.bg-image{
+  background-image: url('../../assets/images/conn.jpeg');
+  background-position: center;
+}
+
 
 .wrapper {
   width: 520px;
   height: auto;
   background: rgba(19, 46, 21, 0.5);
   border: 2px solid rgb(0, 252, 13);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 50px;
   padding: 30px 40px;
   margin: 0 auto;
   margin-top: 100px;

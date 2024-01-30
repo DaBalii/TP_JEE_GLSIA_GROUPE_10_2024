@@ -1,12 +1,23 @@
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 100px;
+  padding-bottom: 500px;
+}
+.bg-image{
+  background-image: url('../../assets/images/conn.jpeg');
+  background-position: center;
+}
+
+
 .wrapper {
   width: 520px;
   height: auto;
   background: rgba(19, 46, 21, 0.5);
   border: 2px solid rgb(0, 252, 13);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 50px;
   padding: 30px 40px;
   margin: 0 auto;
   margin-top: 100px;
@@ -47,8 +58,19 @@
   font-size: 30px;
 }
 
-.error-message {
-  color: red;
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+  margin-right: 3px;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
 }
 
 .btn {
@@ -62,10 +84,12 @@
   cursor: pointer;
   color: #333;
   font-weight: 600;
-  transition: background-color 0.3s ease;
 }
-
+.error-message {
+  color: red;
+  font-size: 14px; 
+}
 .btn1:hover {
-  background-color: #3498db; /* Couleur bleue au survol */
-  color: #fff; /* Texte en blanc au survol */
+  background-color: #3498db; 
+  color: #fff; 
 }
