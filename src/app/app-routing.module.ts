@@ -17,7 +17,9 @@ const routes: Routes = [
   {path: "editer-client/:id", component: EditerClientComponent},
   {path: 'liste-compte', component: ListeCompteComponent},
   {path: 'editer-compte/:id', component: EditerCompteComponent},
-  {path: 'new-compte', component:NewCompteComponent}
+  {path: 'new-compte', component:NewCompteComponent},
+  { path: 'login', component: UserConnexionComponent }
+
 ];
 
 @NgModule({

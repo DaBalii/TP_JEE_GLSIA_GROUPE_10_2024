@@ -12,12 +12,12 @@
     <h2>Login</h2>
 
     <div class="input-box">
-      <label for="email">Email</label>
-      <input id="email" type="email" class="form-control" [(ngModel)]="loginRequest.email" required
-        placeholder="Enter your Email" autocomplete="email" />
+      <label for="username">Username</label>
+      <input id="username" type="text" class="form-control" [(ngModel)]="loginRequest.username" required
+        placeholder="Enter your Username" autocomplete="username" />
       <i class="bx bxs-user"></i>
-      <div *ngIf="emailErrors.length > 0" class="error error-message">
-        <div *ngFor="let error of emailErrors">{{ error }}</div>
+      <div *ngIf="userNameErrors.length > 0" class="error error-message">
+        <div *ngFor="let error of userNameErrors">{{ error }}</div>
       </div>
     </div>
 

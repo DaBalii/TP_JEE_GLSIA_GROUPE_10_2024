@@ -9,20 +9,20 @@ import { LoginRequest } from '../models/log.model';
   styleUrls: ['./user-connexion.component.css']
 })
 export class UserConnexionComponent {
-  loginRequest: LoginRequest = { email: '', password: '' };
-  emailErrors: string[] = [];
+  loginRequest: LoginRequest = { username: '', password: '' };
+  userNameErrors: string[] = [];
   passwordErrors: string[] = [];
 
   constructor(private router: Router, private authService: AuthService) {}
 
   login(): void {
     // Clear previous errors
-    this.emailErrors = [];
+    this.userNameErrors = [];
     this.passwordErrors = [];
 
     // Validate form
-    if (!this.loginRequest.email) {
-      this.emailErrors.push('Email is required');
+    if (!this.loginRequest.username) {
+      this.userNameErrors.push('Username is required');
     }
 
     if (!this.loginRequest.password) {
@@ -30,7 +30,7 @@ export class UserConnexionComponent {
     }
 
     // If no validation errors, proceed with login
-    if (this.emailErrors.length === 0 && this.passwordErrors.length === 0) {
+    if (this.userNameErrors.length === 0 && this.passwordErrors.length === 0) {
       this.authService.login(this.loginRequest).subscribe(
         (response) => {
           console.log('Login successful', response);
@@ -52,4 +52,3 @@ export class UserConnexionComponent {
     this.router.navigate(['liste']);
   }
 }
-

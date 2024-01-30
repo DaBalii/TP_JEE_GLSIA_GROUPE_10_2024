@@ -83,5 +83,9 @@ body {
 }
 .error-message {
   color: red;
-  font-size: 14px; /* ajustez la taille de la police selon vos préférences */
+  font-size: 14px; 
+}
+.btn1:hover {
+  background-color: #3498db; 
+  color: #fff; 
 }
