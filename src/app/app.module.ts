@@ -8,6 +8,11 @@ import { ListeClientsComponent } from './liste-clients/liste-clients.component';
 import { NewClientComponent } from './new-client/new-client.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditerClientComponent } from './editer-client/editer-client.component';
+import { ListeCompteComponent } from './liste-compte/liste-compte.component';
+import { EditerCompteComponent } from './editer-compte/editer-compte.component';
+import { NewCompteComponent } from './new-compte/new-compte.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +21,18 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ListeClientsComponent,
     NewClientComponent,
     UserRegisterComponent,
+    EditerClientComponent,
+    ListeCompteComponent,
+    EditerCompteComponent,
+    NewCompteComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

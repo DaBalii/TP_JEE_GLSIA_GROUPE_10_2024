@@ -8,4 +8,5 @@ export interface Client
   nom: string
   prenom: string
   sexe: string
+  numero_telephone : string
 }

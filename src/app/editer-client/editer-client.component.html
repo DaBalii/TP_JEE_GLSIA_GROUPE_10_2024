@@ -10,8 +10,8 @@
     <li><a href="#">App Bank
       <span class="nav-item"></span></a>
     </li>
-    <li><a href="#"><i class="bi fas bi-house"></i>
-      <span class="nav-item">Home</span>
+    <li><a href="#" routerLink="/liste"><i class="bi fas bi-house"></i>
+      <span class="nav-item">Liste</span>
       </a>
     </li>
     <li><a href="#"><i class="bi fas bi-house"></i>
@@ -25,9 +25,9 @@
 
   </nav>
 
-  <div class="container">
-    <form [formGroup]="clientForm" (ngSubmit)="saveClient()">
-      <h1>New Client</h1>
+  <div class="container" *ngIf="clientForm">
+    <form [formGroup]="clientForm" (ngSubmit)="updateClient()">
+      <h1>Update Client</h1>
       <div class="detail">
         <div class="form">
           <label for="">Nom:</label>
@@ -60,65 +60,17 @@
   </div>
 
 
-  <!--<div class="container">
-    <div class="title">New Client</div>
-    <form action="">
-      <div class="user-details">
-        <div class="input-box">
-          <span class="details">Nom</span>
-          <input type="text" placeholder="Enter the name" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Prenom</span>
-          <input type="text" placeholder="Enter the first name" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Email</span>
-          <input type="email" placeholder="Enter the name" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Adresse</span>
-          <input type="text" placeholder="Enter the name" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Nom</span>
-          <input type="text" placeholder="Enter the name" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Nom</span>
-          <input type="text" placeholder="Enter the name" required>
-        </div>
-        <div class="gender-details">
-          <span class="gender-title">Gender</span>
-          <div class="category">
-            <label for="">
-              <span class="dot one"></span>
-              <span class="gender">Female</span>
-            </label>
-            <label for="">
-              <span class="dot one"></span>
-              <span class="gender">Male</span>
-            </label>
-          </div>
-        </div>
-        <div class="button">
-          <input type="submit" value="Register">
-        </div>
-      </div>
-    </form>
-  </div>-->
-
-</body>
-</html>
 
 
 <!--<div class="p-3">
-  <div class="card">
+  <div class="card shadow ms-5 me-5">
+    <div class="card-header">
+      <h3>Mise à jour d'un Client</h3>
+    </div>
     <div class="card-body">
-      <h3>Formulaire d'ajout d'une catégorie</h3>
       <div class="row">
-        <div class="col-md-6">
-          <form [formGroup]="clientForm" (ngSubmit)="saveClient()">
+        <div class="col-md-6" *ngIf="clientForm">
+          <form [formGroup]="clientForm" (ngSubmit)="updateClient()">
             <div>
               <label class="form-label">Nom : </label>
               <input class="form-control" formControlName="nom">
@@ -148,7 +100,7 @@
               <input class="form-control" formControlName="numero_telephone">
             </div>
             <div class="mt-2">
-              <button [disabled]="clientForm.invalid" class="btn btn-primary">Enregistrer</button>
+              <button [disabled]="clientForm.invalid" class="btn btn-primary">Valider</button>
             </div>
           </form>
         </div>
@@ -156,7 +108,3 @@
     </div>
   </div>
 </div>-->
-
-
-
-
