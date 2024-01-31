@@ -20,7 +20,6 @@ export class UserRegisterComponent {
     this.userNameErrors = [];
     this.passwordErrors = [];
 
-    // Validate form
     if (!this.registerRequest.username) {
       this.userNameErrors.push('Username is required');
     }
