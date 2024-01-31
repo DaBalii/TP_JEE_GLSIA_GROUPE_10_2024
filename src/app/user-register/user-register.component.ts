@@ -30,7 +30,6 @@ export class UserRegisterComponent {
     }
 
 
-    // If no validation errors, proceed with registration
     if (
       this.userNameErrors.length === 0 &&
       this.passwordErrors.length === 0
