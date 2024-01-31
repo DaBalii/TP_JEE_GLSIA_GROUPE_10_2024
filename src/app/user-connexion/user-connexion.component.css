@@ -6,15 +6,17 @@ body {
 .bg-image{
   background-image: url('../../assets/images/conn.jpeg');
   background-position: center;
+    background-attachment: fixed;
+
 }
 
 
 .wrapper {
   width: 520px;
   height: auto;
-  background: rgba(19, 46, 21, 0.5);
-  border: 2px solid rgb(0, 252, 13);
-  backdrop-filter: blur(10px);
+  background: rgba(151, 243, 188, 0.1);
+  border: px solid rgb(0, 252, 13);
+  backdrop-filter: blur(50px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #fff;
   border-radius: 50px;
