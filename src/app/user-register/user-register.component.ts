@@ -16,7 +16,6 @@ export class UserRegisterComponent {
   constructor(private router: Router, private authService: AuthService) {}
 
   register(): void {
-    // Clear previous errors
     this.userNameErrors = [];
     this.passwordErrors = [];
 
