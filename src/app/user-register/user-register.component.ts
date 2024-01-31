@@ -37,7 +37,6 @@ export class UserRegisterComponent {
       this.authService.register(this.registerRequest).subscribe(
         (response) => {
           console.log('Registration successful', response);
-          // Redirect or perform other actions upon successful registration
         },
         (error) => {
           console.error('Registration failed', error);
