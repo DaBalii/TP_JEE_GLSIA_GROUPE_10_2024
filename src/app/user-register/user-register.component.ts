@@ -40,7 +40,6 @@ export class UserRegisterComponent {
         },
         (error) => {
           console.error('Registration failed', error);
-          // Handle specific error cases if needed
         }
       );
     }
