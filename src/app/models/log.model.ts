@@ -6,6 +6,6 @@ export interface LoginRequest{
 
 export interface RegisterRequest{
   username: string
-  passwors: string
+  password: string
   entity_no: string
 }
