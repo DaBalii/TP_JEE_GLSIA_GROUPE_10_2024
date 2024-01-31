@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body>
+<body class="bg-image">
   <nav>
     <li><a href="#">App Bank
       <span class="nav-item"></span></a>
@@ -25,10 +25,10 @@
 
   </nav>
 
-  <div class="container">
+  <div class="wrapper">
     <form [formGroup]="compteForm" (ngSubmit)="saveCompte()">
       <h1>New Compte</h1>
-      <div class="detail">
+      <div class="input-box">
         <div class="form">
           <label for="">Numero:</label>
           <input type="text"  class="control" formControlName="numero_compte" required>

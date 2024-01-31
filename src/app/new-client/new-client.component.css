@@ -119,3 +119,101 @@ nav:hover{
   width: 280px;
   transition: all 0.5s ease;
 }
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 100px;
+  padding-bottom: 500px;
+}
+.bg-image{
+  background-image: url('../../assets/images/cli.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.wrapper {
+  width: 620px;
+  height: auto;
+  background: rgba(98, 216, 210, 0.1);
+  border: px solid rgb(0, 252, 13);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-radius: 50px;
+  padding: 30px 40px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.wrapper h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+  margin-right: 3px;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+}
+.error-message {
+  color: red;
+  font-size: 14px; 
+}
+.btn1:hover {
+  background-color: #3498db; 
+  color: #fff; 
+}
